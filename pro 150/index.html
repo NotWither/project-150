@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene background="color:gray">
+
+    <a-camera wasd-controls-enabled="true" position="0 8 20"></a-camera>
+
+    <!-------------------------------------------Asset Management------------------------------------------->
+    <a-assets > 
+    <a-asset-item id="table1" src="./models/gltf/Tremendous Curcan.glb"></a-asset-item>  
+    <a-asset-item id="table2" src="./models/obj/Tremendous Curcan/obj.mtl"></a-asset-item>   
+    <a-asset-item id="table3" src="./models/obj/Tremendous Curcan/tinker.obj"></a-asset-item>
+
+      <!--Add Code Here-->
+
+    </a-assets>
+    
+    
+    <!--------------------------------------OBJ Models----------------------------------------------------------->   
+  
+    <!--Add code here-->
+    <a-entity obj-model="obj:#table3; mtl:#table2; " gltf-model="gltf:#table1" position="5 0 0" rotation="-90 -40 0" scale="0.1 0.1 0.1">
+
+    </a-entity>
+
+
+
+    
+    <!-------------------------------------Circular Plane----------------------------------------------->
+    
+    <a-circle id="floor" position="-0.4 -0.76 -25" rotation="-90 0 0" radius="100" shadow="receive: true" visible="true"
+      color="white">
+    </a-circle>
+    
+  
+    <!-------------------------------------Room Walls----------------------------------------------->
+    
+  </a-scene>
+</body>
+
+</html>
